@@ -1,0 +1,40 @@
+<div class="container">
+
+    <div class="secao">
+        <h3 class="text-center">Cinema, viagens, diversão muito e mais!</h3>
+        <h5 class="text-center">Conheça as melhores ofertas para você se divertir quando quiser:</h5>
+    </div>
+
+    <hr />
+
+    <div *ngFor="let projeto of projetos">
+        <div class="row">
+            <div class="col-md-4">
+                <img [src]="projeto.imagens[0]['url']" class="img-fluid" />
+            </div>
+
+            <div class="col-md-8">
+                <div class="row">
+                    <h4>{{projeto.titulo}}</h4>
+                </div>
+
+                <div class="row">
+                    <h5>{{projeto.descricao_oferta}}</h5>
+                </div>
+
+                <div class="row">
+                    <p>Data limite: <b>{{projeto.prazo | date:'dd/MM/yyyy'}}</b></p>
+                </div>
+
+                <div class="row">
+                    <p>Anunciado por: <b>{{projeto.cliente}}</b></p>
+                </div>
+
+                <div class="row">
+                    <button [routerLink]="['/oferta', projeto.id]" class="btn btn-outline-success">Ver projeto</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr/>
+</div>

@@ -1,0 +1,13 @@
+$backgroundMenu: #ffffff;
+$colorFont: #D96409;
+$colorButton: #5E171B;
+section {
+    position: relative;
+    width: 100%;
+    min-height: 82vh;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $backgroundMenu;
+}

@@ -2,7 +2,7 @@ import { Observable } from 'rxjs';
 import { URL_API } from './app.api';
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core';
-import { Produtos } from './shared/produto.model';
+import { Produtos } from './shared/model/produto.model';
 import 'rxjs/add/operator/toPromise';
 import { map } from 'rxjs/operators';
 import { retry } from 'rxjs/operators';

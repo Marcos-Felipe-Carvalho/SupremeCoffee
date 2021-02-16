@@ -1,3 +1,4 @@
+import { OrdemCompraComponent } from './ordem-compra/ordem-compra.component';
 import { DescricaoComponent } from './oferta/descricao/descricao.component';
 import { ComoPedirComponent } from './oferta/como-pedir/como-pedir.component';
 import { OfertaComponent } from './oferta/oferta.component';
@@ -18,5 +19,6 @@ export const ROUTES: Routes = [
             {path:'como-pedir', component: ComoPedirComponent},
             {path: 'descricao', component: DescricaoComponent}
         ]
-    }
+    },
+    {path:'ordem-compra', component: OrdemCompraComponent}
 ]

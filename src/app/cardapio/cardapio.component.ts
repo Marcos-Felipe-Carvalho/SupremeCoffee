@@ -1,6 +1,6 @@
 import { ProdutosService } from './../produtos.service';
 import { Component, OnInit } from '@angular/core';
-import { Produtos } from '../shared/produto.model';
+import { Produtos } from '../shared/model/produto.model';
 
 @Component({
   selector: 'app-cardapio',

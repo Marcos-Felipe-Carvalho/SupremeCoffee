@@ -1,0 +1,132 @@
+<div class="container">
+    <div class="ordem-compra" *ngIf="idPedidoCompra == undefined">
+        <form novalidate>
+
+            <h5>Sua Compra</h5>
+            <hr />
+
+            <div class="form-row" style="background: #FAFAFA; padding: 20px; border-bottom: solid 1px #F0F0F0">
+                <div class="form-group col-sm-1">
+                    <img src="/assets/ofertas/1/img1.jpg" class="img-fluid">
+                </div>
+                <div class="form-group col-sm-6">
+                    Super Burger
+                    <br /> Rodízio de Mini-hambúrger com opção de entrada.
+                </div>
+
+                <div>
+                    <div class="row">
+                        <div class="col">
+                            <button type="button" class="btn btn-link">-</button> 1
+                            <button type="button" class="btn btn-link">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-sm-3 d-flex justify-content-end">
+                    29.90
+                </div>
+            </div>
+
+            <div class="form-row" style="background: #FAFAFA; padding: 20px; border-bottom: solid 1px #F0F0F0">
+                <div class="form-group col-sm-1">
+                    <img src="/assets/ofertas/4/img1.jpg" class="img-fluid">
+                </div>
+                <div class="form-group col-sm-6">
+                    Estância das águas
+                    <br /> Diversão garantida com piscinas, trilhas e muito mais.
+                </div>
+
+                <div>
+                    <div class="row">
+                        <div class="col">
+                            <button type="button" class="btn btn-link">-</button> 1
+                            <button type="button" class="btn btn-link">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-sm-3 d-flex justify-content-end">
+                    31.90
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col d-flex justify-content-end">
+                    <h4>Total do pedido: 61.80</h4>
+                </div>
+            </div>
+            <br />
+
+
+            <h5>Dados de entrega</h5>
+            <hr />
+
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    <input #inputEndereco (input)="atualizaEndereco(inputEndereco.value)" [value]="endereco" type="text" class="form-control {{enderecoEstadoPrimitivo==true ? '' : (validaEndereco != true ? 'is-invalid' : 'is-valid')}}" placeholder="Endereço" autocomplete="off"
+                        minlength="5" required>
+                    <div *ngIf="enderecoEstadoPrimitivo == false">
+                        <div *ngIf="validaEndereco == true; else msgEnderecoInvalido">
+                            <small class="form-text text-success">Ok</small>
+                        </div>
+                        <ng-template #msgEnderecoInvalido>
+                            <small class="form-text text-danger">Endereço Inválido</small>
+                        </ng-template>
+                    </div>
+                </div>
+
+                <div class="form-group col-md-2">
+                    <input #inputNumero (input)="atualizaNumero(inputNumero.value)" [value]="numero" type="text" class="form-control {{numeroEstadoPrimitivo==true ? '': (validaNumero!= true ? 'is-invalid':'is-valid')}}" placeholder="Número" autocomplete="off" minlength="1"
+                        required>
+                    <br />
+                    <div *ngIf="numeroEstadoPrimitivo == false">
+                        <div *ngIf="validaNumero == true; else msgNumeroInvalido">
+                            <small class="form-text text-success">Ok</small>
+                        </div>
+                        <ng-template #msgNumeroInvalido>
+                            <small class="form-text text-danger">Número Inválido</small>
+                        </ng-template>
+                    </div>
+                </div>
+                <div class="form-group col-md-4">
+                    <input #inputComplemento (input)="atualizaComplemento(inputComplemento.value)" [value]="complemento" type="text" class="form-control {{validaComplemento != true ? '' : 'is-valid'}}" placeholder="Complemento" autocomplete="off">
+                    <div *ngIf="validaComplemento == true">
+                        <small class="form-text text-success">Ok</small>
+                    </div>
+                </div>
+
+            </div>
+            <br />
+
+            <h5>Dados de pagamento</h5>
+            <hr />
+
+            <div class="form-row">
+
+                <div class="form-group col-md-3">
+                    <select #selectFormaPagamento (change)="atualizaFormaPagamento(selectFormaPagamento.value)" class="form-control {{formaPagamentoEstadoPrimitivo==true ? '': (validaFormaPagamento != true ? 'is-invalid' : 'is-valid')}}">
+                        <option disabled selected>Selecione uma opção</option>
+                        <option selected="{{formaPagamento == 'dinheiro' ? 'selected' : ''}}" value="dinheiro">Dinheiro</option>
+                        <option selected="{{formaPagamento == 'debito'   ? 'selected' : ''}}" value="debito">Débito</option>
+                    </select>
+                    <div *ngIf="formaPagamentoEstadoPrimitivo == false">
+                        <div *ngIf="validaFormaPagamento == true; else msgPagamentoInvalido">
+                            <div class="text-success">Ok</div>
+                        </div>
+                    </div>
+                    <ng-template #msgPagamentoInvalido>
+                        <div class="invalid-feedback">Selecione uma forma de pagamento</div>
+                    </ng-template>
+                </div>
+            </div>
+
+            <hr />
+            <button (click)="confirmarCompra()" [disabled]="formEstado" type="button" class="btn btn-primary btn-lg">Cofirmar compra</button>
+        </form>
+    </div>
+    <div class="ordem-compra" *ngIf="idPedidoCompra != undefined">
+        <app-ordem-compra-sucesso [idPedidoCompra]="idPedidoCompra"></app-ordem-compra-sucesso>
+    </div>
+</div>

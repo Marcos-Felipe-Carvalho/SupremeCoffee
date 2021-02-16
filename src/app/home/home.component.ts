@@ -1,5 +1,5 @@
 import { Observable, Subject, of } from 'rxjs';
-import { Produtos } from '../shared/produto.model';
+import { Produtos } from '../shared/model/produto.model';
 import { ProdutosService } from '../produtos.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -30,11 +30,11 @@ export class HomeComponent implements OnInit {
 
   changeImgSlider(imgUrlFlex):void{
     this.imgUrl = imgUrlFlex
-}
+  }
 
-changeColorCircle(color):void{
-  this.colorCircle = color
-}
+  changeColorCircle(color):void{
+    this.colorCircle = color
+  }
   ngOnInit(): void {
     //this.ofertas = this.ofertasService.getOfertas()
     this.produtoService.getOfertas()

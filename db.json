@@ -1,109 +1,184 @@
 {
-    "ofertas": [{
-            "id": 1,
-            "categoria": "item_cardapio",
-            "titulo": "Café Expresso",
-            "descricao_oferta": "Xicará de café expresso em oferta.",
-            "valor": 7.50,
-            "destaque": true,
-            "imagens": [
-                { "url": "/assets/ofertas/1/img1.jpg" },
-                { "url": "/assets/ofertas/1/img2.jpg" },
-                { "url": "/assets/ofertas/1/img3.jpg" },
-                { "url": "/assets/ofertas/1/img4.jpg" }
-            ]
+  "ofertas": [
+    {
+      "id": 1,
+      "categoria": "item_cardapio",
+      "titulo": "Café Expresso",
+      "descricao_oferta": "Xicará de café expresso em oferta.",
+      "valor": 7.5,
+      "destaque": true,
+      "imagens": [
+        {
+          "url": "/assets/ofertas/1/img1.jpg"
         },
         {
-            "id": 2,
-            "categoria": "item_cardapio",
-            "titulo": "Bolo de Chocolate",
-            "descricao_oferta": "Bolo de chocolate delicioso com cobertura de brigadeiro.",
-            "valor": 37.50,
-            "destaque": true,
-            "imagens": [
-                { "url": "/assets/ofertas/2/img1.jpg" },
-                { "url": "/assets/ofertas/2/img2.jpg" },
-                { "url": "/assets/ofertas/2/img3.jpg" },
-                { "url": "/assets/ofertas/2/img4.jpg" }
-            ]
+          "url": "/assets/ofertas/1/img2.jpg"
         },
         {
-            "id": 3,
-            "categoria": "item_cardapio",
-            "titulo": "Salgados",
-            "descricao_oferta": "Coxinha, rissole e quibe em promoção por unidade",
-            "valor": 1.50,
-            "destaque": true,
-            "imagens": [
-                { "url": "/assets/ofertas/3/img1.jpg" },
-                { "url": "/assets/ofertas/3/img2.jpg" },
-                { "url": "/assets/ofertas/3/img3.jpg" },
-                { "url": "/assets/ofertas/3/img4.jpg" }
-            ]
+          "url": "/assets/ofertas/1/img3.jpg"
         },
         {
-            "id": 4,
-            "categoria": "projeto_freenlancer",
-            "titulo": "Agenda de Contatos",
-            "descricao_oferta": "Preciso de um freenlancer para realizar um desenvolver um aplicativo mobile para cadastrar uma agenda de contatos dos serviços da minha empresa",
-            "prazo": "01-04-2021",
-            "cliente": "Giorgia Distribuídora",
-            "imagens": [
-                { "url": "/assets/projetos_freenlancer/1/img1.jpeg" }
-            ]
-        },
-        {
-            "id": 5,
-            "categoria": "projeto_freenlancer",
-            "titulo": "Design de cozinha com sala",
-            "descricao_oferta": "Preciso de um freenlancer para elaborar um projeto para a cozinha planejada de minha empresa.",
-            "prazo": "01-04-2021",
-            "cliente": "Consultoria K+",
-            "imagens": [
-                { "url": "/assets/projetos_freenlancer/2/img1.jpg" }
-            ]
+          "url": "/assets/ofertas/1/img4.jpg"
         }
-    ],
-    "como-pedir": [{
-            "id": 1,
-            "descricao": "Venha degustar nosso café expresso na Rua David de Souza Camargo, 433, Prado Velho"
+      ]
+    },
+    {
+      "id": 2,
+      "categoria": "item_cardapio",
+      "titulo": "Bolo de Chocolate",
+      "descricao_oferta": "Bolo de chocolate delicioso com cobertura de brigadeiro.",
+      "valor": 37.5,
+      "destaque": true,
+      "imagens": [
+        {
+          "url": "/assets/ofertas/2/img1.jpg"
         },
         {
-            "id": 2,
-            "descricao": "Entre em contato com nossa equipe de para um atendimento através do número (41)4231-5678."
+          "url": "/assets/ofertas/2/img2.jpg"
         },
         {
-            "id": 3,
-            "descricao": "Encomendar com 48 horas de antecedencia"
+          "url": "/assets/ofertas/2/img3.jpg"
         },
         {
-            "id": 4,
-            "descricao": "Interressados enviar portfólio para o nosso e-mail: giorgia@distribuidora.com.br"
-        },
-        {
-            "id": 5,
-            "descricao": "Interressados entrar em contato através do número (41) 98754-3210, falar com Alex"
+          "url": "/assets/ofertas/2/img4.jpg"
         }
-    ],
-    "descricao": [{
-            "id": 1,
-            "detalhes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec aliquam massa, non sollicitudin elit. Vivamus hendrerit sem ac condimentum varius. Morbi vitae massa enim. Donec eget mauris mauris. Duis pharetra felis eget libero molestie ullamcorper. Praesent ex purus, mattis eget leo eget, scelerisque tincidunt nibh. Aenean eros mauris, ultrices ac scelerisque nec, vehicula eget turpis. Sed commodo erat eu nulla iaculis venenatis. Sed a malesuada magna. In pulvinar purus nibh, a ultrices tellus lacinia pretium. Aenean finibus id dolor id ultricies. Aenean volutpat mauris risus, vitae condimentum risus fringilla in. Phasellus at faucibus velit, varius aliquet magna. Sed egestas mauris sit amet suscipit sollicitudin."
+      ]
+    },
+    {
+      "id": 3,
+      "categoria": "item_cardapio",
+      "titulo": "Salgados",
+      "descricao_oferta": "Coxinha, rissole e quibe em promoção por unidade",
+      "valor": 1.5,
+      "destaque": true,
+      "imagens": [
+        {
+          "url": "/assets/ofertas/3/img1.jpg"
         },
         {
-            "id": 2,
-            "detalhes": "Praesent vitae massa iaculis nisl semper porta. Vestibulum sagittis risus varius leo maximus convallis. Nam vitae molestie erat, in scelerisque purus. Cras mollis pulvinar metus, vel finibus tellus imperdiet non. Aliquam vel dui arcu. Proin sit amet sem et erat viverra lacinia. In porta dui at rutrum pharetra. Ut mi ex, vulputate ut volutpat vitae, pellentesque vel sem."
+          "url": "/assets/ofertas/3/img2.jpg"
         },
         {
-            "id": 3,
-            "detalhes": "Morbi ac posuere dui, quis faucibus velit. Suspendisse vel libero dapibus, placerat risus et, cursus turpis. In luctus placerat nunc a tempor. In non luctus est. Fusce tincidunt augue eu libero commodo facilisis. Sed accumsan laoreet nisi, non facilisis est posuere ut. Suspendisse sagittis nulla metus, id molestie leo molestie eget. Donec scelerisque mauris eget purus egestas, aliquet imperdiet ex vestibulum. Sed ullamcorper sagittis libero tristique fermentum. Phasellus eget consectetur sem. Nulla sed lorem in arcu blandit facilisis. Donec libero ex, hendrerit id est molestie, ornare tristique nunc. Aenean quam lorem, cursus et dapibus ac, interdum ut odio."
+          "url": "/assets/ofertas/3/img3.jpg"
         },
         {
-            "id": 4,
-            "detalhes": "Morbi eu velit et justo ullamcorper imperdiet lobortis in metus. Sed lectus enim, porttitor quis molestie quis, fermentum eget dui. In molestie sapien at orci cursus, eget euismod nunc varius. Curabitur porttitor erat viverra neque varius tincidunt. Suspendisse id volutpat ante. Fusce volutpat vel sapien et pulvinar. Etiam dapibus mollis neque, sit amet hendrerit tellus porttitor lobortis. Cras nunc lectus, iaculis sit amet mi ut, cursus scelerisque justo. Ut tempus auctor dapibus. Quisque at diam ultrices, finibus urna faucibus, luctus erat. Phasellus a maximus lectus. Aliquam vitae enim mauris. Fusce nec quam vel nunc ultrices lacinia. Donec sodales nisi a orci vulputate consectetur"
-        },
-        {
-            "id": 5,
-            "detalhes": "Nulla at condimentum mi. Aenean non leo auctor, convallis felis et, malesuada lectus. Mauris vitae urna eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque malesuada, lacus porttitor convallis semper, sem felis ornare dolor, tristique gravida ligula odio a sem. Nunc ante eros, imperdiet vel tristique non, dapibus non nisi. Pellentesque sagittis fringilla purus, sit amet aliquam ex sollicitudin in. Sed eleifend odio libero, in suscipit sem rhoncus et."
+          "url": "/assets/ofertas/3/img4.jpg"
         }
-    ]
+      ]
+    },
+    {
+      "id": 4,
+      "categoria": "projeto_freenlancer",
+      "titulo": "Agenda de Contatos",
+      "descricao_oferta": "Preciso de um freenlancer para realizar um desenvolver um aplicativo mobile para cadastrar uma agenda de contatos dos serviços da minha empresa",
+      "prazo": "01-04-2021",
+      "cliente": "Giorgia Distribuídora",
+      "imagens": [
+        {
+          "url": "/assets/projetos_freenlancer/1/img1.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "categoria": "projeto_freenlancer",
+      "titulo": "Design de cozinha com sala",
+      "descricao_oferta": "Preciso de um freenlancer para elaborar um projeto para a cozinha planejada de minha empresa.",
+      "prazo": "01-04-2021",
+      "cliente": "Consultoria K+",
+      "imagens": [
+        {
+          "url": "/assets/projetos_freenlancer/2/img1.jpg"
+        }
+      ]
+    }
+  ],
+  "como-pedir": [
+    {
+      "id": 1,
+      "descricao": "Venha degustar nosso café expresso na Rua David de Souza Camargo, 433, Prado Velho"
+    },
+    {
+      "id": 2,
+      "descricao": "Entre em contato com nossa equipe de para um atendimento através do número (41)4231-5678."
+    },
+    {
+      "id": 3,
+      "descricao": "Encomendar com 48 horas de antecedencia"
+    },
+    {
+      "id": 4,
+      "descricao": "Interressados enviar portfólio para o nosso e-mail: giorgia@distribuidora.com.br"
+    },
+    {
+      "id": 5,
+      "descricao": "Interressados entrar em contato através do número (41) 98754-3210, falar com Alex"
+    }
+  ],
+  "descricao": [
+    {
+      "id": 1,
+      "detalhes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec aliquam massa, non sollicitudin elit. Vivamus hendrerit sem ac condimentum varius. Morbi vitae massa enim. Donec eget mauris mauris. Duis pharetra felis eget libero molestie ullamcorper. Praesent ex purus, mattis eget leo eget, scelerisque tincidunt nibh. Aenean eros mauris, ultrices ac scelerisque nec, vehicula eget turpis. Sed commodo erat eu nulla iaculis venenatis. Sed a malesuada magna. In pulvinar purus nibh, a ultrices tellus lacinia pretium. Aenean finibus id dolor id ultricies. Aenean volutpat mauris risus, vitae condimentum risus fringilla in. Phasellus at faucibus velit, varius aliquet magna. Sed egestas mauris sit amet suscipit sollicitudin."
+    },
+    {
+      "id": 2,
+      "detalhes": "Praesent vitae massa iaculis nisl semper porta. Vestibulum sagittis risus varius leo maximus convallis. Nam vitae molestie erat, in scelerisque purus. Cras mollis pulvinar metus, vel finibus tellus imperdiet non. Aliquam vel dui arcu. Proin sit amet sem et erat viverra lacinia. In porta dui at rutrum pharetra. Ut mi ex, vulputate ut volutpat vitae, pellentesque vel sem."
+    },
+    {
+      "id": 3,
+      "detalhes": "Morbi ac posuere dui, quis faucibus velit. Suspendisse vel libero dapibus, placerat risus et, cursus turpis. In luctus placerat nunc a tempor. In non luctus est. Fusce tincidunt augue eu libero commodo facilisis. Sed accumsan laoreet nisi, non facilisis est posuere ut. Suspendisse sagittis nulla metus, id molestie leo molestie eget. Donec scelerisque mauris eget purus egestas, aliquet imperdiet ex vestibulum. Sed ullamcorper sagittis libero tristique fermentum. Phasellus eget consectetur sem. Nulla sed lorem in arcu blandit facilisis. Donec libero ex, hendrerit id est molestie, ornare tristique nunc. Aenean quam lorem, cursus et dapibus ac, interdum ut odio."
+    },
+    {
+      "id": 4,
+      "detalhes": "Morbi eu velit et justo ullamcorper imperdiet lobortis in metus. Sed lectus enim, porttitor quis molestie quis, fermentum eget dui. In molestie sapien at orci cursus, eget euismod nunc varius. Curabitur porttitor erat viverra neque varius tincidunt. Suspendisse id volutpat ante. Fusce volutpat vel sapien et pulvinar. Etiam dapibus mollis neque, sit amet hendrerit tellus porttitor lobortis. Cras nunc lectus, iaculis sit amet mi ut, cursus scelerisque justo. Ut tempus auctor dapibus. Quisque at diam ultrices, finibus urna faucibus, luctus erat. Phasellus a maximus lectus. Aliquam vitae enim mauris. Fusce nec quam vel nunc ultrices lacinia. Donec sodales nisi a orci vulputate consectetur"
+    },
+    {
+      "id": 5,
+      "detalhes": "Nulla at condimentum mi. Aenean non leo auctor, convallis felis et, malesuada lectus. Mauris vitae urna eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque malesuada, lacus porttitor convallis semper, sem felis ornare dolor, tristique gravida ligula odio a sem. Nunc ante eros, imperdiet vel tristique non, dapibus non nisi. Pellentesque sagittis fringilla purus, sit amet aliquam ex sollicitudin in. Sed eleifend odio libero, in suscipit sem rhoncus et."
+    }
+  ],
+  "pedidos": [
+    {
+      "endereco": "Rua José Gusso",
+      "numero": "287",
+      "complemento": "Fazendinha",
+      "formaPagamento": "dinheiro",
+      "id": 1
+    },
+    {
+      "endereco": "Rua dos Canários",
+      "numero": "171",
+      "complemento": "Novo Mundo",
+      "formaPagamento": "debito",
+      "id": 2
+    },
+    {
+      "endereco": "Rua João Bonatto",
+      "numero": "737",
+      "complemento": "Pilarzinho",
+      "formaPagamento": "dinheiro",
+      "id": 3
+    },
+    {
+      "endereco": "Rua Mônica Grochowski",
+      "numero": "345",
+      "complemento": "Xaxim",
+      "formaPagamento": "dinheiro",
+      "id": 4
+    },
+    {
+      "endereco": "Rua Júlio David Jansen",
+      "numero": "600",
+      "complemento": "Umbará",
+      "formaPagamento": "dinheiro",
+      "id": 5
+    },
+    {
+      "endereco": "Rua Esther da Silva Florenzano",
+      "numero": "987",
+      "complemento": "Cidade Industrial",
+      "formaPagamento": "dinheiro",
+      "id": 6
+    }
+  ]
 }

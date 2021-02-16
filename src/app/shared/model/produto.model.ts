@@ -8,4 +8,5 @@ export class Produtos{
     public destaque: boolean
     public imagens: Array<object>
     public cliente: string
+
 }

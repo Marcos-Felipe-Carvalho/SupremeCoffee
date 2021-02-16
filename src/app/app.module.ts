@@ -14,6 +14,8 @@ import { FreelancerComponent } from './freelancer/freelancer.component';
 import { OfertaComponent } from './oferta/oferta.component';
 import { DescricaoComponent } from './oferta/descricao/descricao.component';
 import { ComoPedirComponent } from './oferta/como-pedir/como-pedir.component';
+import { OrdemCompraComponent } from './ordem-compra/ordem-compra.component';
+import { OrdemCompraSucessoComponent } from './ordem-compra/ordem-compra-sucesso/ordem-compra-sucesso.component';
 
 
 
@@ -28,6 +30,8 @@ import { ComoPedirComponent } from './oferta/como-pedir/como-pedir.component';
     OfertaComponent,
     DescricaoComponent,
     ComoPedirComponent,
+    OrdemCompraComponent,
+    OrdemCompraSucessoComponent,
   ],
   imports: [
     PipeModule,

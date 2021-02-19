@@ -1,0 +1,38 @@
+<div class="container">
+    <div *ngIf="idPropostaProjeto == undefined" class="proposta-projeto">
+        <form #formulario="ngForm" (ngSubmit)="realizarProposta()" novalidate>
+            <!--<pre>{{formulario.value | json}}</pre>-->
+            <h5>Sua Proposta</h5>
+            <hr/>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="suaOferta">Valor da Proposta:</label>
+                    <input ngModel type="number" #inputOferta="ngModel" required name="valorProposta" min="1" minlength="3" class="form-control" id="suaOferta" autocomplete="off" placeholder="Ex: 1.000,00">
+                    <small *ngIf="inputOferta.valid && inputOferta.touched" class="form-text text-success">Ok</small>
+                    <small *ngIf="!inputOferta.valid && inputOferta.touched" class="form-text text-danger">Campo Inválido</small>
+
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="duracaoEstimada">Duração estimada:</label>
+                    <input ngModel #inputDuracao="ngModel" type="number" required name="duracaoEstimada" min="1" class="form-control" id="duracaoEstimada" autocomplete="off" placeholder="Ex: 10">
+                    <small *ngIf="inputDuracao.valid && inputDuracao.touched" class="form-text text-success">Ok</small>
+                    <small *ngIf="!inputDuracao.valid && inputDuracao.touched" class="form-text text-danger">Campo Inválido</small>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="detalhes">Detalhes</label>
+                    <textarea ngModel #inputDetalhes="ngModel" class="form-control" required autocomplete="off" minlenght="3" name="detalhes" id="detalhes" rows="3"></textarea>
+                    <small *ngIf="inputDetalhes.valid && inputDetalhes.touched" class="form-text text-success">Ok</small>
+                    <small *ngIf="!inputDetalhes.valid && inputDetalhes.touched" class="form-text text-danger">Campo Inválido</small>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mb-3">Enviar Proposta</button>
+        </form>
+    </div>
+    <div *ngIf="idPropostaProjeto != undefined" class="proposta-projeto">
+        <app-proposta-projeto-sucesso [idPropostaProjeto]="idPropostaProjeto"></app-proposta-projeto-sucesso>
+    </div>
+</div>

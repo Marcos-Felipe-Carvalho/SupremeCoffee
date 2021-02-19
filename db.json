@@ -180,5 +180,25 @@
       "formaPagamento": "dinheiro",
       "id": 6
     }
+  ],
+  "propostas-projetos": [
+    {
+      "valorProposta": 2569.14,
+      "duracaoEstimada": 46,
+      "detalhes": "Teste",
+      "id": 1
+    },
+    {
+      "valorProposta": 50000,
+      "duracaoEstimada": 20,
+      "detalhes": "Teste",
+      "id": 2
+    },
+    {
+      "valorProposta": 50000,
+      "duracaoEstimada": 25,
+      "detalhes": "Teste",
+      "id": 3
+    }
   ]
 }

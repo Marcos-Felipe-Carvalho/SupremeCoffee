@@ -1,3 +1,4 @@
+import { PropostaProjetoComponent } from './proposta-projeto/proposta-projeto.component';
 import { OrdemCompraComponent } from './ordem-compra/ordem-compra.component';
 import { DescricaoComponent } from './oferta/descricao/descricao.component';
 import { ComoPedirComponent } from './oferta/como-pedir/como-pedir.component';
@@ -20,5 +21,6 @@ export const ROUTES: Routes = [
             {path: 'descricao', component: DescricaoComponent}
         ]
     },
-    {path:'ordem-compra', component: OrdemCompraComponent}
+    {path:'ordem-compra', component: OrdemCompraComponent},
+    {path:'proposta-projeto', component: PropostaProjetoComponent}
 ]

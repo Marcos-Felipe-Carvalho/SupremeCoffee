@@ -1,3 +1,4 @@
+import { PublicarProjetoComponent } from './publicar-projeto/publicar-projeto.component';
 import { PropostaProjetoComponent } from './proposta-projeto/proposta-projeto.component';
 import { OrdemCompraComponent } from './ordem-compra/ordem-compra.component';
 import { DescricaoComponent } from './oferta/descricao/descricao.component';
@@ -22,5 +23,6 @@ export const ROUTES: Routes = [
         ]
     },
     {path:'ordem-compra', component: OrdemCompraComponent},
-    {path:'proposta-projeto', component: PropostaProjetoComponent}
+    {path:'proposta-projeto', component: PropostaProjetoComponent},
+    {path:'publicar-projeto', component: PublicarProjetoComponent},
 ]

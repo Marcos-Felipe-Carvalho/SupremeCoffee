@@ -1,0 +1,66 @@
+<div class="container">
+    <div *ngIf="idProjeto == undefined" class="publicar-projeto">
+        <form [formGroup]="formulario" (ngSubmit)="publicarProjeto()">
+            <h5>Publicar Projeto</h5>
+            <hr/>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="categoria_projeto">Categoria Projeto:</label>
+                    <select formControlName="categoria_projeto" class="form-control">
+                        <option>Administração & Contabilidade</option>
+                        <option>Advogados & Leis</option>
+                        <option>Atendimento ao Consumidor</option>
+                        <option>Design & Criação</option>
+                        <option>Educação & Consultoria</option>
+                        <option>Engenharia & Arquitetura</option>
+                        <option>Escrita</option>
+                        <option>Fotografia & AudioVisual</option>
+                        <option>Suporte Administrativo</option>
+                        <option>Tradução</option>
+                        <option>Vendas & Marketing</option>
+                        <option>Web, Mobile & Software</option>
+                    </select>
+                    <small *ngIf="formulario.get('categoria_projeto').status == 'VALID'  && formulario.get('categoria_projeto').touched " class="form-text text-success">Ok</small>
+                    <small *ngIf="formulario.get('categoria_projeto').status == 'INVALID' && formulario.get('categoria_projeto').touched" class=" form-text text-danger ">Campo Inválido</small>
+                </div>
+            </div>
+            <div class="form-row ">
+                <div class="form-group col-md-6 ">
+                    <label for="nome_projeto">Nome projeto::</label>
+                    <input formControlName="nome_projeto" type="text" class="form-control" id="nome_projeto" autocomplete="off ">
+                    <small *ngIf="formulario.get('nome_projeto').status == 'VALID'  && formulario.get('nome_projeto').touched " class="form-text text-success">Ok</small>
+                    <small *ngIf="formulario.get('nome_projeto').status == 'INVALID' && formulario.get('nome_projeto').touched" class=" form-text text-danger ">Campo Inválido</small>
+                </div>
+            </div>
+            <div class="form-row ">
+                <div class="form-group col-md-6 ">
+                    <label for="nome_projeto">Descrição do projeto::</label>
+                    <textarea formControlName="descricao_projeto" class="form-control " autocomplete="off " rows="3 "></textarea>
+                    <small *ngIf="formulario.get('descricao_projeto').status == 'VALID'  && formulario.get('descricao_projeto').touched " class="form-text text-success">Ok</small>
+                    <small *ngIf="formulario.get('descricao_projeto').status == 'INVALID' && formulario.get('descricao_projeto').touched" class=" form-text text-danger ">Campo Inválido</small>
+                </div>
+            </div>
+            <div class="form-row ">
+                <div class="form-group col-md-6 ">
+                    <label for="nivel_experiencia">Nível de Experiência desejado:</label>
+                    <select formControlName="nivel_experiencia" class="form-control ">
+                        <option>Iniciante</option>
+                        <option>Intermediário</option>
+                        <option>Especialista</option>
+                    </select>
+                    <small *ngIf="formulario.get('nivel_experiencia').status == 'VALID'  && formulario.get('nivel_experiencia').touched " class="form-text text-success">Ok</small>
+                    <small *ngIf="formulario.get('nivel_experiencia').status == 'INVALID' && formulario.get('nivel_experiencia').touched" class=" form-text text-danger ">Campo Inválido</small>
+                </div>
+            </div>
+            <button [disabled]="formulario.status == 'INVALID'" type="submit " class="btn btn-primary mb-3 ">Publicar Projeto</button>
+        </form>
+    </div>
+    <div *ngIf="idProjeto != undefined" class="publicar-projeto">
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Projeto publicado com sucesso</h4>
+            <p>O número do seu projeto é <strong> {{idProjeto}} </strong></p>
+            <hr>
+            <p class="mb-0">Agradecemos sua preferência!</p>
+        </div>
+    </div>
+</div>

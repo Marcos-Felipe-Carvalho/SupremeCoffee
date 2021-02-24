@@ -16,9 +16,10 @@ import { DescricaoComponent } from './oferta/descricao/descricao.component';
 import { ComoPedirComponent } from './oferta/como-pedir/como-pedir.component';
 import { OrdemCompraComponent } from './ordem-compra/ordem-compra.component';
 import { OrdemCompraSucessoComponent } from './ordem-compra/ordem-compra-sucesso/ordem-compra-sucesso.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PropostaProjetoComponent } from './proposta-projeto/proposta-projeto.component';
 import { PropostaProjetoSucessoComponent } from './proposta-projeto/proposta-projeto-sucesso/proposta-projeto-sucesso.component';
+import { PublicarProjetoComponent } from './publicar-projeto/publicar-projeto.component';
 
 
 
@@ -37,13 +38,15 @@ import { PropostaProjetoSucessoComponent } from './proposta-projeto/proposta-pro
     OrdemCompraSucessoComponent,
     PropostaProjetoComponent,
     PropostaProjetoSucessoComponent,
+    PublicarProjetoComponent,
   ],
   imports: [
     PipeModule,
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(ROUTES),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
   ],

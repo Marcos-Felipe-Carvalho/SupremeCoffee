@@ -200,5 +200,21 @@
       "detalhes": "Teste",
       "id": 3
     }
+  ],
+  "publicar-projetos": [
+    {
+      "categoria_projeto": "Web, Mobile & Software",
+      "nome_projeto": "Sistema Gerenciador Financeiro",
+      "descricao_projeto": "Preciso de um desenvolvedor para desenvolver um sistema para gerenciar as finanças da minha empresa,.\n\nCaso tenha Interesse enviar seu portfólio",
+      "nivel_experiencia": "Intermediário",
+      "id": 1
+    },
+    {
+      "categoria_projeto": "Web, Mobile & Software",
+      "nome_projeto": "Criar um blog pessoal ",
+      "descricao_projeto": "Preciso de um blog feito com HTML5, CSS3, JavaScript ou PHP,\npara assunto de informática. Que tenha uma área para comentários e uma barra lateral com assuntos, sobre o perfil, recentes post etc...",
+      "nivel_experiencia": "Iniciante",
+      "id": 2
+    }
   ]
 }

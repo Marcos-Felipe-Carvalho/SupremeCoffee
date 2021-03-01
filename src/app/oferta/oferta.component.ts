@@ -1,3 +1,4 @@
+import { CarrinhoCompraService } from './../carrinho-compra.service';
 import { Produtos } from '../shared/model/produto.model';
 import { ProdutosService } from './../produtos.service';
 import { Component, OnInit } from '@angular/core';
@@ -16,10 +17,12 @@ export class OfertaComponent implements OnInit {
 
   constructor(
     private route:ActivatedRoute, 
-    private produtoService:ProdutosService
+    private produtoService:ProdutosService,
+    private carrinhoCompraService:CarrinhoCompraService
   ) { }
 
   ngOnInit(): void {
+ 
     this.route.params.subscribe((paramentros:Params)=>{
       this.produtoService.getProdutosPorId(paramentros.id)  
       .then((produto: Produtos)=>{
@@ -29,4 +32,8 @@ export class OfertaComponent implements OnInit {
    
   }
 
+  public adicionarItemCarrinho():void{
+    this.carrinhoCompraService.incluirItem(this.produto)
+
+  }
 }

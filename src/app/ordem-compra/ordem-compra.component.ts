@@ -1,3 +1,5 @@
+import { ItemCarrinho } from './../shared/model/item-carrinho.model';
+import { CarrinhoCompraService } from './../carrinho-compra.service';
 import { Pedido } from './../shared/model/pedido.model';
 import { OrdemCompraService } from './../ordem-compra.service';
 import { Component, OnInit } from '@angular/core';
@@ -19,7 +21,9 @@ export class OrdemCompraComponent implements OnInit {
   //Pedido
   public pedido:Pedido = new Pedido('','','','')
 
+  //Carrinho de Compra
   public idPedidoCompra:number
+  public itensCarrinho: Array<ItemCarrinho> = []
 
   //controle de validação dos campos
   public validaEndereco:Boolean
@@ -35,10 +39,14 @@ export class OrdemCompraComponent implements OnInit {
   
   //controlar estado do estado do form
   public formEstado:string = "disabled"
-  constructor(private ordemCompraService:OrdemCompraService) { }
+  constructor(
+    private ordemCompraService:OrdemCompraService,
+    private carrinhoCompraService: CarrinhoCompraService
+    ) { }
 
   ngOnInit(): void {
-    //this.ordemCompraService.efetivarCompra()
+    this.itensCarrinho = this.carrinhoCompraService.exibirItens()
+    console.log(this.itensCarrinho)
   }
 
   public atualizaEndereco(endereco:string):void{

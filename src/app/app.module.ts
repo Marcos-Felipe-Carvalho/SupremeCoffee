@@ -1,3 +1,4 @@
+import { CarrinhoCompraService } from './carrinho-compra.service';
 import { PipeModule } from './shared/pipe/pipe.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
@@ -49,6 +50,7 @@ import { PublicarProjetoComponent } from './publicar-projeto/publicar-projeto.co
     ReactiveFormsModule
   ],
   providers: [
+    CarrinhoCompraService
   ],
   bootstrap: [AppComponent]
 })

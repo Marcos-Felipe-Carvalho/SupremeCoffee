@@ -179,6 +179,64 @@
       "complemento": "Cidade Industrial",
       "formaPagamento": "dinheiro",
       "id": 6
+    },
+    {
+      "endereco": "Rua Maria das Dores",
+      "numero": "123",
+      "complemento": "Casa 2",
+      "formaPagamento": "dinheiro",
+      "itens": [
+        {
+          "id": 1,
+          "img": {
+            "url": "/assets/ofertas/1/img1.jpg"
+          },
+          "titulo": "Café Expresso",
+          "descricao_produto": "Xicará de café expresso em oferta.",
+          "valor": 7.5,
+          "quantidade": 2
+        },
+        {
+          "id": 2,
+          "img": {
+            "url": "/assets/ofertas/2/img1.jpg"
+          },
+          "titulo": "Bolo de Chocolate",
+          "descricao_produto": "Bolo de chocolate delicioso com cobertura de brigadeiro.",
+          "valor": 37.5,
+          "quantidade": 8
+        },
+        {
+          "id": 3,
+          "img": {
+            "url": "/assets/ofertas/3/img1.jpg"
+          },
+          "titulo": "Salgados",
+          "descricao_produto": "Coxinha, rissole e quibe em promoção por unidade",
+          "valor": 1.5,
+          "quantidade": 34
+        }
+      ],
+      "id": 7
+    },
+    {
+      "endereco": "Rua Hello World",
+      "numero": "1257",
+      "complemento": "Blob H",
+      "formaPagamento": "debito",
+      "itens": [
+        {
+          "id": 1,
+          "img": {
+            "url": "/assets/ofertas/1/img1.jpg"
+          },
+          "titulo": "Café Expresso",
+          "descricao_produto": "Xicará de café expresso em oferta.",
+          "valor": 7.5,
+          "quantidade": 1
+        }
+      ],
+      "id": 8
     }
   ],
   "propostas-projetos": [

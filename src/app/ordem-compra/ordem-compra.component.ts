@@ -3,6 +3,7 @@ import { CarrinhoCompraService } from './../carrinho-compra.service';
 import { Pedido } from './../shared/model/pedido.model';
 import { OrdemCompraService } from './../ordem-compra.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ordem-compra',
@@ -19,7 +20,7 @@ export class OrdemCompraComponent implements OnInit {
 
 
   //Pedido
-  public pedido:Pedido = new Pedido('','','','')
+  public pedido:Pedido = new Pedido('','','','',[])
 
   //Carrinho de Compra
   public idPedidoCompra:number
@@ -113,14 +114,31 @@ export class OrdemCompraComponent implements OnInit {
 
   public confirmarCompra():void{
 
-    this.pedido.endereco = this.endereco
-    this.pedido.numero = this.numero
-    this.pedido.complemento = this.complemento
-    this.pedido.formaPagamento = this.formaPagamento
+    if (this.carrinhoCompraService.exibirItens().length === 0) {
+      alert('Você não possui nenhum item no carrinho')
+    }else{
+      this.pedido.endereco = this.endereco
+      this.pedido.numero = this.numero
+      this.pedido.complemento = this.complemento
+      this.pedido.formaPagamento = this.formaPagamento
+      this.pedido.itens = this.carrinhoCompraService.exibirItens()
+  
 
-    this.ordemCompraService.efetivarCompra(this.pedido)
-      .subscribe((resposta:number)=>{
-        this.idPedidoCompra = resposta
-      })
+      console.log(this.pedido)
+      this.ordemCompraService.efetivarCompra(this.pedido)
+        .subscribe((resposta:number)=>{
+          this.idPedidoCompra = resposta
+          this.carrinhoCompraService.esvaziarCarrinho()
+        })
+    }
+   
+  }
+
+  public adicionarItem(item:ItemCarrinho){
+    this.carrinhoCompraService.adicionarAoCarrinho(item)
+  }
+
+  public decrementarItem(item:ItemCarrinho){
+    this.carrinhoCompraService.decrementarDoCarrinho(item)
   }
 }

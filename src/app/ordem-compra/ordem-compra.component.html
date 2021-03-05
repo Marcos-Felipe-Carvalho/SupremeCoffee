@@ -1,4 +1,4 @@
-<div class="container">
+<div *ngIf="itensCarrinho.length > 0" class="container">
     <div class="ordem-compra" *ngIf="idPedidoCompra == undefined">
         <form novalidate>
 
@@ -17,8 +17,8 @@
                 <div>
                     <div class="row">
                         <div class="col">
-                            <button type="button" class="btn btn-link">-</button> {{item.quantidade}}
-                            <button type="button" class="btn btn-link">+</button>
+                            <button (click)="decrementarItem(item)" type="button" class="btn btn-link">-</button> {{item.quantidade}}
+                            <button (click)="adicionarItem(item)" type="button" class="btn btn-link">+</button>
                         </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
             </div>
             <div class="form-row">
                 <div class="form-group col d-flex justify-content-end">
-                    <h4>Total do pedido: 61.80</h4>
+                    <h4>Total do pedido: {{carrinhoCompraService.totalCarrinhoCompras() | currency:'BRL':true}}</h4>
                 </div>
             </div>
             <br />
@@ -104,5 +104,13 @@
     </div>
     <div class="ordem-compra" *ngIf="idPedidoCompra != undefined">
         <app-ordem-compra-sucesso [idPedidoCompra]="idPedidoCompra"></app-ordem-compra-sucesso>
+    </div>
+</div>
+<div *ngIf="itensCarrinho.length === 0" class="container">
+
+    <div class="alert alert-warning" role="alert">
+        <h4 class="alert-heading">Seu carrinho está vazio <strong>:(</strong></h4>
+        <p>Não perca tempo! Aproveite nossas ofertas.</p>
+        <hr>
     </div>
 </div>
